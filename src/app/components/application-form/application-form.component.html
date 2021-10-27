@@ -1,0 +1,361 @@
+
+  
+
+
+
+<div class="container px-5" style="margin-left: 23%; margin-top: 3%;">
+
+    <form class="py-1 border w-75 px-5" style="background-color: #F3F0D7;"[formGroup]="form"> 
+
+      <div class="">
+
+        <div class="card shadow-lg" >
+         
+
+            <div class="card-body  " style="">
+            
+              <h6 class="card-subtitle mb-2 text-muted">Filiale</h6>
+
+
+              
+              <div class="w-50 d-flex py-3">
+                <label for="exampleInputEmail1" class="py-2">
+                    
+                    Filiale*
+                        
+                        </label>
+                <select class="form-select p" aria-label="Default select example" formControlName="gender">
+                    <option selected> Bitte wählen</option>
+                
+                    <option value="1">Sousse</option>
+                    <option value="2">Jammel</option>
+                   
+                  </select>
+
+              </div>
+
+         
+
+         
+
+             
+            </div>
+          </div>
+
+       </div>
+
+
+       <div class="py-2">
+
+        <div class="card shadow-lg" >
+         
+
+            <div class="card-body  " style="">
+            
+              <h6 class="card-subtitle mb-2 text-muted">Zur Person</h6>
+
+
+              
+              <div class="w-50 d-flex py-3">
+                <label for="exampleInputEmail1" class="py-2">
+                    
+                    Anrede*
+                        
+                        </label>
+                <select class="form-select p" aria-label="Default select example" formControlName="gender">
+                    <option selected> Bitte wählen</option>
+                    
+                    <option value="1">Frau</option>
+                    <option value="2">Fräulein</option>
+                    <option value="3">Herr</option>
+                  </select>
+
+              </div>
+
+              <div class="form-group w-50">
+                <label for="exampleInputEmail1">Vorname*</label>
+                <input type="text" class="form-control"  placeholder="" formControlName="firstName">
+                
+              </div>
+              <div class="form-group w-50">
+                <label for="exampleInputEmail1">Nachname*</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="lastName">
+                
+              </div>
+
+              <div class="form-group w-75">
+                <label for="exampleInputEmail1">Geburtsdatum*</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="birthdate">
+                
+              </div>
+              <div class="form-group w-75">
+                <label for="exampleInputEmail1">Geburtsort*</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="birthPlace">
+                
+              </div>
+   
+              <div class="w-50 d-flex py-3">
+                <label for="exampleInputEmail1" class="py-2">
+                    
+                  Staatsangehörigkeit*
+                        
+                        </label>
+                <select class="form-select p" aria-label="Default select example" formControlName="gender">
+                    <option selected> Bitte wählen</option>
+                    
+                    <option value="1" *ngFor="let c of countries ">{{c.nativeName}}</option>
+                   
+                  </select>
+
+              </div>
+            
+          
+
+         
+
+             
+            </div>
+          </div>
+
+       </div>
+       
+
+
+      <div class="py-2">
+        <div class="card shadow-lg " >
+            <div class="card-body ">
+              
+              <h6 class="card-subtitle mb-2 text-muted">Heimatadresse</h6>
+              <div class="form-group py-3">
+                <label for="exampleInputEmail1">Straße und Hausnummer</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="street">
+                
+              </div>
+              <div class="form-group py-3">
+                <label for="exampleInputEmail1">PLZ</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="zip">
+                
+              </div>
+     
+             
+              <div class="form-group">
+                <label for="exampleInputEmail1">Ort</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="city">
+                
+              </div>
+     
+     
+              <div class="form-group">
+                <label for="exampleInputEmail1">Land</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="country">
+                
+              </div>
+     
+     
+      
+
+             
+            </div>
+          </div>
+
+
+
+      </div>
+        
+    
+      
+      <div class="py-2">
+        <div class="card shadow-lg " >
+            <div class="card-body ">
+              
+              <h6 class="card-subtitle mb-2 text-muted">Adresse in Deutschland (delete)</h6>
+              
+             
+     
+             
+              <div class="form-group">
+                <label for="exampleInputEmail1">PLZ</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="deZip">
+                
+              </div>
+     
+     
+              <div class="form-group">
+                <label for="exampleInputEmail1">Ort</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="deCity">
+                
+              </div>
+     
+     
+      
+       
+             
+            </div>
+          </div>
+
+
+
+      </div>
+      
+
+
+      <div class="py-2">
+        <div class="card shadow-lg" >
+            <div class="card-body ">
+            
+              <h6 class="card-subtitle mb-2 text-muted">Kontakt</h6>
+              
+              <div class="form-group py-3">
+                <label for="exampleInputEmail1">E-Mail*</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" formControlName="mail">
+                
+              </div>
+     
+             
+              <div class="form-group">
+                <label for="exampleInputEmail1">Wiederholen Sie Ihre E-Mail Eingabe *</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="repeatMail">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+     
+     
+              <div class="form-group">
+                <label for="exampleInputEmail1">Telefon*</label>
+           <div class="d-flex">
+          <!--
+          <div style="" *ngIf="countries">    
+                 <select class="form-select" aria-label="Default select example"  >
+                  <option >Open this select menu</option>
+                <option  *ngFor="let c of countries" value="1">
+                    
+                     <img style="" src="{{c.flag}}" alt="">
+                
+                </option> </select>
+              </div>
+
+          -->   
+           <input type="tel" class="form-control" aria-describedby="emailHelp" placeholder="" formControlName="phone"></div>     
+              
+              </div>
+     
+     
+      
+       
+
+             
+            </div>
+          </div>
+
+
+
+      </div>
+
+
+
+      <div class="py-2">
+
+        <div class="card shadow-lg" >
+         
+
+            <div class="card-body ">
+              
+              <h6 class="card-subtitle mb-2 text-muted">Angaben zu den Deutschkenntnissen</h6>
+
+
+           
+              <div class="w-75 d-flex py-2">
+                <label for="exampleInputEmail1">
+                    
+                    Vorkenntnisse in der deutschen Sprache *
+                        
+                        </label>
+                <select class="form-select " aria-label="Default select example" formControlName="deKnowledge" >
+                    <option selected> Bitte wählen</option>
+                    
+                    <option value="1">keine Vorkenntnisse</option>
+                    <option value="2">Grundkenntnisse</option>
+                    <option value="3">gut</option>
+                    <option value="4">sehr gut</option>
+                  </select>
+
+                  
+
+
+
+
+
+              </div>
+
+           
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Staatsangehörigkeit*</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                
+              </div>
+     
+     
+     
+
+         
+
+             
+            </div>
+          </div>
+
+       </div>
+
+
+       <div class="py-2">
+
+        <div class="card shadow-lg" >
+       
+           
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Benötigte Dokumente</h6>     
+
+         <div class="files">
+              <p>Bitte laden Sie hier Ihren Nachweis der Hochschulreife hoch, z.B. eine Kopie Ihres Zeugnisses (ggf. mit Übersetzung), das den Zugang zu einer deutschen Hochschule ermöglicht, eine Kopie Ihrer Immatrikulation oder des Zulassungsbescheids der Universität oder den Bescheid der Zeugnisanerkennungsstelle.</p>
+            <div class="input-group mb-3">
+                <input type="file" (change)="onFileSelected($event)" class="form-control" id="inputGroupFile02">
+               
+              </div>
+
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+               
+              </div>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+               
+              </div>
+
+         </div>
+
+
+            </div>
+          </div>
+
+       </div>
+
+
+
+
+
+   
+
+            <button (click)="submit()"class="btn btn-info">Anmelden</button>
+
+
+      </form>
+<script>
+    $("input").intlTelInput({
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+});
+</script>
+
+</div>
+
+
+
+
